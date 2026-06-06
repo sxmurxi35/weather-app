@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 10px;
 }
 
@@ -55,7 +55,7 @@ body {
   transition: 0.3s;
 }
 
-.unit-selector input{
+.unit-selector input {
   display: none;
 }
 
@@ -63,7 +63,7 @@ body {
   background-color: #696969;
 }
 
-.unit-selector input:checked + .toggleUnit::before{
+.unit-selector input:checked + .toggleUnit::before {
   left: 32px;
 }
 
@@ -76,4 +76,46 @@ body {
 
 .unit-selector p.selected {
   color: #eee;
+}
+
+/* -------------------- INPUT STYLING -------------------- */
+.input-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #222;
+
+  padding: 0 0.5vw 0 0;
+  border-radius: 15px;
+
+}
+#cityInput {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #ccc;
+  padding: 10px 0.5vw;
+
+}
+
+#search-button {
+  background-color: transparent;
+  padding: 5px;
+  outline: none;
+  border: none;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+#search-button:hover, #search-button:active{
+  background-color: #333;
 }
