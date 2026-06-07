@@ -15,13 +15,15 @@ searchButton.addEventListener("click", async () => {
   const weatherInfo = await getWeather(city, unit);
   input.setAttribute("placeholder", city);
   input.value = "";
-  displayWeatherInfo(weatherInfo);
+  displayWeatherInfo(weatherInfo, unit);
 });
 
 const unitToggle = document.querySelector("#unitSwitch");
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
   unitToggle.checked = false;
+  const weatherInfo = await getWeather(city, unit);
+  displayWeatherInfo(weatherInfo, unit);
 });
 
 unitToggle.addEventListener("change", () => {
@@ -38,6 +40,6 @@ unitToggle.addEventListener("change", () => {
   const main = document.querySelector("main");
   if (main.textContent != "") {
     getWeather(city, unit);
-    displayWeatherInfo(weatherInfo);
+    displayWeatherInfo(weatherInfo, unit);
   }
 });

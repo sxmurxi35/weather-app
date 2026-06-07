@@ -9,7 +9,7 @@ export default async function getWeather(city, metric) {
   }
 
   const getWeatherForCity = await fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=${unit}&key=SJKMCFUUNKK6NVBRL8KCDEZLK&contentType=json`,
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=${unit}&key=MSLWS33KW8SLJNQT3NCCUNP9X&contentType=json`,
   );
   const result = await getWeatherForCity.json();
 
