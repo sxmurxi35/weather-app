@@ -114,15 +114,23 @@ function displayError() {
   const errorHeading = createElement("h1");
   errorHeading.textContent = "There was some error caught";
 
-  const errorMessage = createElement("p");
-  errorMessage.innerHTML =
-    "Please make sure that you wrote correct city name. <br> You might need to refresh the page.";
+  const errorMessageSect = createElement("sect");
+  errorMessageSect.classList.add("error-message-sect");
+
+  const errorMessageMain = createElement("p");
+  errorMessageMain.textContent =
+    "Please make sure that you wrote correct city name.";
+
+  const errorMessageAdd = createElement("p");
+  errorMessageAdd.textContent = "You might need to refresh the page.";
 
   const refreshButton = createElement("button");
   refreshButton.textContent = "Refresh";
   refreshButton.setAttribute("onClick", "window.location.reload()");
 
-  errorSect.append(errorHeading, errorMessage, refreshButton);
+  errorMessageSect.append(errorMessageMain, errorMessageAdd, refreshButton);
+
+  errorSect.append(errorHeading, errorMessageSect);
   main.append(errorSect);
 }
 
